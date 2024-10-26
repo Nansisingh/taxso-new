@@ -1,0 +1,2969 @@
+<!DOCTYPE html>
+<!--
+	Bonativo by TEMPLATE STOCK
+	templatestock.co @templatestock
+	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
+-->
+
+<html lang="en">
+
+<head>
+    <style>
+        .form-group input {
+            box-shadow: none;
+            border: none;
+            border-bottom: 1px solid #e9e9e9;
+            border-radius: unset
+        }
+        
+        .form-group select {
+            box-shadow: none;
+            border: none;
+            border-bottom: 1px solid #e9e9e9;
+            border-radius: unset
+        }
+        
+        .form-control:focus {
+            box-shadow: unset !important;
+        }
+        
+        .form-control {
+            font-size: 15px !important;
+        }
+        
+        .option-input {
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            -ms-appearance: none;
+            -o-appearance: none;
+            appearance: none;
+            position: relative;
+            top: 6.33333px;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            height: 25px;
+            width: 25px;
+            transition: all 0.15s ease-out 0s;
+            background: #e9e9e9;
+            border: none;
+            color: #fff;
+            cursor: pointer;
+            display: inline-block;
+            margin-right: 0.5rem;
+            outline: none;
+            position: relative;
+            z-index: 1000;
+        }
+        
+        .option-input.radio {
+            border-radius: 50%;
+            display: inline-block;
+            border: none;
+        }
+        
+        .option-input.radio::after {
+            border-radius: 50%;
+            border: none;
+        }
+        
+        .option-input:hover {
+            background: #9faab7;
+            border: none;
+        }
+        
+        .option-input:checked {
+            background: #f44336;
+            border: none;
+        }
+        
+        .option-input:checked::before {
+            width: 25px;
+            height: 25px;
+            display: flex;
+            content: '\f00c';
+            font-size: 20px;
+            font-weight: bold;
+            position: absolute;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Font Awesome 5 Free';
+            border: none;
+        }
+        
+        .option-input:checked::after {
+            -webkit-animation: click-wave 0.65s;
+            -moz-animation: click-wave 0.65s;
+            animation: click-wave 0.65s;
+            background: #f44336;
+            content: '';
+            display: block;
+            position: relative;
+            z-index: 100;
+            border: none;
+        }
+        
+        .btn {
+            text-transform: none !important;
+            letter-spacing: 0px !important;
+            border-radius: 0px !important;
+        }
+        
+        .features li {
+            line-height: 1.8;
+            margin-bottom: 15px;
+            position: relative;
+            color: #444;
+            padding-left: 20px;
+            list-style: none;
+            font-size: 15px;
+        }
+        
+        .features li:before {
+            content: "●";
+            position: absolute;
+            top: 2px;
+            left: 0;
+        }
+        
+        .strong {
+            font-weight: 600;
+            font-size: 16px;
+            color: #000;
+            margin-right: 4px;
+            /* font-family: Zoho Puvi Medium,-apple-system,BlinkMacSystemFont,San Francisco,Helvetica Neue,Helvetica,Ubuntu,Roboto,Noto,Segoe UI,Arial,sans-serif; */
+        }
+        
+        .validate {
+            border-radius: 20px;
+            height: 40px;
+            background-color: red;
+            border: 1px solid red;
+            width: 140px;
+        }
+        
+        @media screen and (max-width:5100px) {
+            #SignUpFormDiv .card {
+                padding: 0px 30px !important;
+            }
+        }
+        
+        @media screen and (max-width:1100px) {
+            .RegisterDiv {
+                flex-direction: column;
+                padding: 0px !important;
+            }
+        }
+        
+        @media screen and (max-width:600px) {
+            .row {
+                width: 100% !important;
+                padding: 0px !important;
+            }
+            #SignUpFormDiv {
+                padding: 10% 2% !important;
+                padding-left: 7% !important;
+            }
+            .leftdiv {
+                width: 100% !important;
+                padding: 0px !important;
+                padding-left: 6% !important;
+            }
+            .billing-logo {
+                margin-left: 7rem !important;
+            }
+            #SignUpFormDiv .card {
+                padding: 0px 12px !important;
+            }
+        }
+        
+        @media screen and (max-width:768px) {
+            #imageDiv {
+                display: none !important;
+            }
+            #MainSection {
+                margin: 0px !important;
+            }
+        }
+        
+         ::selection {
+            color: #e52d27 !important;
+        }
+        
+        input:-webkit-autofill,
+        input:-webkit-autofill:hover,
+        input:-webkit-autofill:focus,
+        input:-webkit-autofill:active {
+            transition: background-color 5000000s ease-in-out 0s;
+        }
+        
+        @media screen and (max-width:768px) {
+            #staticBackdropLabel {
+                font-size: 14px !important;
+            }
+            #closeOTPpopbtn {
+                margin-left: 55% !important;
+            }
+        }
+    </style>
+    <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+    <script>
+        (function(w, d, s, l, i) {
+            w[l] = w[l] || [];
+            w[l].push({
+                'gtm.start': new Date().getTime(),
+                event: 'gtm.js'
+            });
+            var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s),
+                dl = l != 'dataLayer' ? '&l=' + l : '';
+            j.async = true;
+            j.src =
+                'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+            f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-5XFVSZM');
+    </script>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Online GST Billing Software | Accouting Software | GST Billing Software-TaxSo</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="title" content="TaxSo">
+    <meta name="description" content="Online GST Compliant Invoicing: Use Taxso GST Software to Prepare and Send Expert GST Invoices. contact with TaxSo">
+    <meta name="keywords" content="TaxSo is Best Accounting Software in Dehradun" />
+    <meta name="author" content="TaxSo is Best Accounting Software in Dehradun" />
+    <link rel="icon" type="image/jpg" href="images/TaxSo-logo-small.png" />
+
+    <!-- Bootstrap -->
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/onboarding.css" rel="stylesheet" type="text/css">
+    <link href="css/flexslider.css" rel="stylesheet" type="text/css">
+    <link href="icons/css/ionicons.min.css" rel="stylesheet" type="text/css">
+    <link href="icons/css/simple-line-icons.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+    <!--revolution slider setting css-->
+    <link href="rs-plugin/css/settings.css" rel="stylesheet">
+    <link href="css/prettyPhoto.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="css/responsive.css">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+          <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+          <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+        <![endif]-->
+    <script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="/js/clientOnboarding.js?v=36"></script>
+
+</head>
+
+
+<body data-spy="scroll" data-target=".navbar" data-offset="80" oncontextmenu="return false;">
+    <!-- oncontextmenu="return false;" -->
+
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5XFVSZM"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+
+    <a style="display: none;" id="openAlert" href="#myModal" class="trigger-btn" data-toggle="modal">Click to Open Confirm Modal</a>
+    <!-- Modal HTML -->
+    <div id="myModal" class="modal fade">
+        <div class="modal-dialog modal-confirm">
+            <div class="modal-content">
+                <div class="modal-header" style="text-align: center;border: none !important;">
+                    <div class="icon-box" id="iconBox" style="text-align: end;background-color: white !important;">
+                        <i class="fa fa-check" aria-hidden="true" id="iconBoxIcon" style="color: black !important;"></i>
+                    </div>
+                    <img src="/images/warning.png" height="100px" width="100px" />
+                    <h4 class="modal-title w-100" id="alertTextHeading" style="text-align: center;font-size: 30px;">Awesome!</h4>
+                </div>
+                <div class="modal-body">
+                    <p class="text-center" id="alertTextMsg" style="color: red;font-size: 16px;">Your payment is successful. Check your email for detials.</p>
+                </div>
+                <div class="modal-footer" style="display: flex; justify-content: center;border: none !important;">
+                    <button class="btn btn-success btn-block" id="closeAlert" data-dismiss="modal" style="width: 100px;">OK</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal HTML End -->
+    <!-- Static navbar -->
+    <nav class="navbar navbar-default navbar-fixed-top before-color" style="padding: 0 12rem;display: none;
+        background: white;">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-controls="navbar">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                <a class="navbar-brand alo" href="index.html">AROHAR TECHNOLOGIES</a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+                <ul class="nav navbar-nav navbar-right scroll-to">
+                    <li><a href="index.html#home">Home</a></li>
+                    <!-- <li><a href="index.html#about">About</a></li> -->
+                    <li><a href="index.html#feature">Feature</a></li>
+                    <!-- <li><a href="#services">Services</a></li> -->
+                    <!-- <li><a href="#work">Product</a></li> -->
+
+                    <!-- <li><a href="Product.html">Product</a></li>  -->
+                    <!-- <li><a href="Pricing.html">Pricing</a></li>  -->
+                    <li><a href="Pricing.html">Pricing</a></li>
+                    <li><a href="Services.html">Services</a></li>
+                    <li><a href="career.html">Career</a></li>
+                    <li style="display: none;"><a href="">Gaurav Chand</a></li>
+                    <!-- <li class="dropdown">                    
+                                
+                            </ul>
+                        </li>  -->
+                    <!-- <li><a target="blank" href="javascript:void(0)" style="color: #03a9f4;">Sign Up</a></li>  -->
+
+                    <li><a href="index.html#contact">Contact</a></li>
+
+                </ul>
+            </div>
+            <!--/.nav-collapse -->
+        </div>
+        <!--/.container-fluid -->
+    </nav>
+
+    <div class="container section-padding" style="width: 100% !important;padding: 0px !important;;margin:0px Im !important;min-height: 900px;overflow: hidden !important;">
+        <!-- <div class="row">
+
+              <div class="col-sm-8 col-sm-offset-2 text-center">
+                  <div class="section-title" style="padding-top: 40px;">
+                      <h3 id="signUpHeading"> </h3> 
+                      <span class="border-line"></span>
+                      <p class="lead subtitle-caption">
+                       
+                      </p>
+                  </div>
+              </div>
+          </div> -->
+
+        <div class="row " id="MainSection">
+            <div class="col-sm-12 col-md-12 col-xl-12 col-lg-12 RegisterDiv" style="display: flex;">
+                <div class="col-sm-12 col-md-12 col-xl-6 col-lg-6 signup_row" id="imageDiv" style="padding: 35px 0px">
+                    <div class="leftdiv" style="width: 540px;
+                    padding: 24px;
+                    padding-left: 40px;
+                    margin: auto">
+                        <a class="billing-logo" href="http://taxso.in/index.html" style="margin-left: 14rem;">
+                            <div class="header" title="Taxso Billing" style="display: inline-flex;margin-bottom: 10px;">
+                                <img src="images/TaxSo_Logo_Large_600x400.png" height="105" width="auto" alt="Taxso">
+                            </div>
+                        </a>
+                        <h1 style="text-align: center;font-size: 34px;
+                  ;font-weight: 600;color: black;margin: 0;" class="mainTitle">Subscription Checkout</h1>
+                        <!-- <div style="text-align: center;font-size: 46px; display: none;"><img src="" id="packageimg" height="28px" style="display: inline;"/> <p id="packagename" style="display: inline;font-size:34px"></p></div> -->
+                        <p style="margin: 35px 0 20px; line-height: 1.8;color: black;font-size: 15px;">Welcome to your all-in-one billing solution for streamlined invoicing, and subscription management.</p>
+                        <h1 class="subheading subTitle" style="font-size: 22px;
+                    margin: 30px 0 20px;font-weight: 600;color: black;
+                    line-height: 1.3">Sign up now to enjoy these capabilities:</h1>
+                        <div class="features">
+                            <ul style="margin: 0;padding: 0">
+                                <li> <span class="strong">Streamline </span> your billing processes and set up automated workflows.</li>
+                                <li> <span class="strong">Create</span> professional invoices and quotes effortlessly.</li>
+                                <li> <span class="strong">Track </span> task hours and expenses for accurate project billing.</li>
+                                <li> <span class="strong">Provide</span> multiple pricing plans, addons, and discount coupons.</li>
+                                <li> <span class="strong">Manage</span> your customer's subscription lifecycle from end-to-end.</li>
+                                <!-- <li> <span class="strong">Set up </span> hosted payment pages and collect payments securely.</li>
+                        <li> <span class="strong">Access</span> insightful reports, including AR aging, MRR, churn rate, LTV, and more.</li> -->
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-12 col-md-12 col-xl-6 col-lg-6 card card-primary card-outline" id="SignUpFormDiv" style="background-color: #f44336;    padding: 50px 120px;">
+                    <div class="col-sm-12 col-md-12 col-xl-12 col-lg-12 card card-primary card-outline" style="
+                    background: white;
+                    border-radius: 18px;" id="formdiv">
+
+                        <div id="loaderDiv" style="display: none;">
+                            <div class="loader">
+                                <span style="color: black;">Loading...</span>
+                            </div>
+                        </div>
+                        <div class="" style="" id="onboardingFormDiv">
+                            <div id="onboardingForm">
+                                <div class="form-group">
+                                    <div class="form-group col-md-12" style="text-align: center;color: black;font-weight: 900;padding: 18px 0px;padding-bottom: 0px !important;
+                          margin-bottom: 0px !important;">
+                                        <h3 style="font-weight: 600;">Access your account now!</h3>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-lg-12 col-md-12 col-sm-12" style="text-align: center;"><img id="packageimg" height="40px" />
+                                            <h3 id="packagename" style="font-weight: 600;
+                            letter-spacing: 2px;"></h3>
+                                        </div>
+                                    </div>
+                                    <div class="form-group col-md-12" style="position: relative;">
+                                        <!-- <label for="CompanyName">Company Name <span style="color: red;"> *</span></label> -->
+                                        <div style="background: url(https://www.zoho.com/billing/svgs/company.svg) no-repeat left;
+                              background-size: 18px;
+                              padding-left: 28px;margin-bottom: 5px">
+                                            <input type="text" name="companyName" class="form-control" placeholder="Company Name" id="CompanyName" required data-validation-required-message="Please enter your company name." style=""><span style="color: red;position: absolute;
+    top: 1rem;
+    right: 1.5rem">*</span></div>
+                                        <span id="errorCompanyName" class="error" style="display:none; color: red;font-size: 12px;">Please enter company name.</span>
+                                    </div>
+                                    <!-- <div class="form-group col-md-1"  id="hidden"></div> -->
+                                    <div class="form-group col-md-12" style="position: relative;">
+                                        <!-- <label for="EmailTo">Email <span style="color: red;"> *</span></label> -->
+                                        <div style="background: url(https://www.zoho.com/billing/svgs/email.svg) no-repeat left; background-size: 18px;
+                              padding-left: 28px;margin-bottom: 5px">
+                                            <input type="email" name="emailId" class="form-control" placeholder="Email Address" id="EmailTo" required data-validation-required-message="Please enter your email address." style=""><span style="color: red;position: absolute;
+    top: 1rem;
+    right: 1.5rem">*</span></div>
+                                        <label style="color: red;display: none;" id="EmailExistLabel">Email id <span id="selectedEmail" style="font-weight: 600;color: #333333;"></span> already exists use another one.</label>
+                                        <span id="errorEmailTo" class="error" style="display:none; color: red;font-size: 12px;"></span><span id="errorEmailTo" class="error" style="display:none; color: #54bee6;">Enter correct email, viz. email@example.com</span>
+                                    </div>
+                                    <!-- <div class="form-group col-md-1"  id="hidden"></div> -->
+                                    <div class="form-group col-md-12" id="GSTINDiv" style="position: relative;">
+                                        <!-- <label for="PhoneNo">Phone no <span style="color: red;"> *</span></label> -->
+                                        <div style="background: url('/images/gstin-icon.png') no-repeat left;
+                              background-size: 20px;
+                              padding-left: 28px;margin-bottom: 5px">
+                                            <input type="text" name="Gstinno" class="form-control" placeholder="Enter GSTIN" id="Gstinno" minlength="15" maxlength="15" onchange="ValidateGstin(this.value)" style=""> <span style="color: red;position: absolute;
+    top: 1rem;
+    right: 1.5rem">*</span> </div>
+                                        <span id="errorGstin" class="error" style="display:none; color: red;font-size: 12px;"></span>
+
+                                    </div>
+                                    <div class="form-group col-md-12" id="StateDiv" style="display: none;">
+                                        <!-- <label for="Package">Package <span style="color: red;"> *</span></label> -->
+                                        <select class="form-control selectpicker" id="selectState" name="selectState" onchange="selectedPackage(this.value)" required style="background: url(https://www.zoho.com/billing/svgs/location.svg) no-repeat left;
+                              background-size: 16px;
+                              padding-left: 28px;margin-bottom: 5px;color:#999999">
+                                <option value ='' hidden selected>Select State</option>
+                              </select>
+
+                                    </div>
+                                    <!-- <div class="form-group col-md-1"  id="hidden"></div> -->
+                                    <div class="form-group col-md-12" id="packageDiv">
+                                        <!-- <label for="Package">Package <span style="color: red;"> *</span></label> -->
+                                        <select class="form-control selectpicker" id="selectPackage" name="selectPackage" onchange="selectedPackage(this.value)" required style="
+                              background-size: 24px;
+                              padding-left: 28px;margin-bottom: 5px;color:#999999">
+                                <option value ='' hidden selected>Select Package</option>
+                                <option  value="Silver">Silver</option>
+                                <option  value="Gold">Gold</option>
+                                <option  value="Platinum">Platinum</option>
+                              </select>
+
+                                    </div>
+                                    <!-- <div class="form-group col-md-1"  id="hidden"></div> -->
+                                    <div class="form-group col-md-12 radio-subscription" id="radioSubscriptionDiv" style="display: block !important;">
+                                        <div class="form-check" style="display: inline;color: #999999;margin-right: 20px;">
+                                            <input class="form-check-input option-input radio" type="radio" name="subscriptionRadioBtn" id="MonthlySubscriptionID" value="MonthlySubscription" onclick="subscriptionTimePeriod('MonthlySubscription')" checked style="outline: 0;">
+                                            <label class="form-check-label" for="MonthlyRadioBtn">
+                                  Monthly 
+                                </label>
+                                        </div>
+                                        <div class="form-check" style="display: inline;color: #555;">
+                                            <input class="form-check-input option-input radio" type="radio" name="subscriptionRadioBtn" id="YearlySubscriptionID" value="YearlySubscription" onclick="subscriptionTimePeriod('YearlySubscription')" style="outline: 0;">
+                                            <label class="form-check-label" for="YearlyRadioBtn">
+                                   Yearly 
+                                </label>
+                                        </div>
+                                    </div>
+
+
+                                    <!-- <div class="form-group col-md-10">
+                            <label for="phone">Phone</label>
+                            <input type="tel" class="form-control" placeholder="Phone Number" id="EmailPhone" required data-validation-required-message="Please enter your phone number.">
+                            <span id="errorEmailPhone" class="error" style="display:none; color: #54bee6;">Required 10 digit number starting with 1,7,8,9</span>
+                          </div> -->
+                                    <!-- <div class="form-group col-md-1"  id="hidden"></div> -->
+                                    <!-- <div class="form-group col-md-10">
+                            <label for="inputAddress">Message</label>
+                            <textarea type="text" class="form-control"  placeholder="Message" id="EmailBody" required data-validation-required-message="Please enter Address."></textarea>
+                            <span id="errorEmailBody" class="error" style="display:none; color: #54bee6;">Address is required</span>
+                          </div> -->
+
+
+                                    <div class="col-md-12 " style="border: 1px solid #e9e9e9;
+                          border-radius: 7px;
+                          padding: 10px;
+                          background: #e9e9e9;margin: 13px 0px">
+                                        <div style="display:flex;justify-content: space-between;padding: 5px 0px">
+                                            <div>Offer Price</div>
+                                            <div>₹ <span id="offerprice">00.00</span> </div>
+                                        </div>
+                                        <div style="display:flex;justify-content: space-between;padding: 5px 0px">
+                                            <div>GST (18%)</div>
+                                            <div>₹ <span id="gstprice">00.00</span> </div>
+                                        </div>
+                                        <div style="border: 1px dashed white; margin: 4px 0px"></div>
+                                        <div style="display:flex;justify-content: space-between;padding: 5px 0px;color: black;
+                            font-size: 16px;
+                            font-weight: 600">
+                                            <div>Total Amount</div>
+                                            <div>₹ <span id="totalprice">00.00</span></div>
+                                        </div>
+
+
+                                    </div>
+                                    <div class="form-group col-md-12" id="makePaymentDiv" style="margin-top: 46px;">
+                                        <div id="CouponCodeDiv" style="display: none;">
+                                            <span class="text-info" style="font-weight:600;margin-bottom: 5px;display: block;" id="CouponCodeLabel">Enter coupon code if you have one ?</span>
+                                            <div class="field input-group" id="ApplyCouponForm" style="width: 122%;">
+                                                <input type="text" id="ApplyCouponInput" class="form-control" placeholder="Enter coupon code" style="outline:0" />
+                                                <span class="input-group-btn"> 
+                                          <button type="button"class="btn btn-default"  id="ApplyCouponButton" onclick="ApplyCoupon()">Apply Coupon</button>
+                                        </span>
+                                            </div>
+                                            <div id="CouponValid" style="display: none;">
+                                                <span style="font-weight:700;"> Promo Code: <span id="CouponName"></span> </span> <i class="fa fa-trash-o" style="cursor:pointer" onclick="RemoveCouponCode()" title="Remove Coupon Code"></i>
+                                                <p style="vertical-align: super; margin-top: 1%;"><i class="fa fa-check" style="color:#04AA6D"></i> <b>VALID COUPON CODE.</b> You're getting the best price we've got.</p>
+                                            </div>
+                                            <p class="text-danger" style="font-weight:600;display: none;" id="CouponWarning">The coupon code you entered is invalid.</p>
+                                        </div>
+                                        <div class="form-check" style="margin: 10px 0;text-align: center;">
+                                            <input class="form-check-input" type="checkbox" name="TermsConditionCheckBox" value="tandc" id="tandc" style="margin-right: 5px;">
+                                            <label class="form-check-label" for="tandc">
+                                    I agree to the <a href="TermsAndConditions.html" style="text-decoration: none;"> Terms & Conditions </a>
+                                  </label>
+                                            <span id="errortandc" class="error" style="display:none; color: red;font-size:12px;">Please Agree To Term & Conditions</span>
+                                        </div>
+                                        <div class="form-group col-md-12" id="freeTrailDiv" style="text-align: center;">
+                                            <img src="/images/loader.gif" id="paymentloader" style="display: none;" />
+                                            <button id="submitbtn" type="button" class="btn btn-primary" onclick="CheckValidEmail()" style="border-radius: 24px !important;
+                                  width: 100%;
+                                  padding: 12px;
+                                  font-weight: 700;
+                                  font-size: 15px;
+                                  line-height: 18px;
+                                  cursor: pointer;
+                                  box-shadow: 0 0 0 rgba(0,0,0,.161)">Proceed To Pay ₹ <span id="ActualPrice">3000</span> /-</button>
+                                            <button id="RegisterButton" type="button" class="btn btn-primary" onclick="CheckValidEmail()" style="border-radius: 24px !important;
+                                  width: 100%;
+                                  padding: 12px;
+                                  font-weight: 700;
+                                  font-size: 15px;
+                                  line-height: 18px;
+                                  cursor: pointer;
+                                  box-shadow: 0 0 0 rgba(0,0,0,.161);display: none;">Register</button>
+                                        </div>
+
+                                        <div class="lds-default" style="display: none; margin-left: 25%;" id="AmountLoaderDiv">
+                                            <div></div>
+                                            <div></div>
+                                            <div></div>
+                                            <div></div>
+                                            <div></div>
+                                            <div></div>
+                                            <div></div>
+                                            <div></div>
+                                            <div></div>
+                                            <div></div>
+                                            <div></div>
+                                            <div></div>
+                                        </div>
+
+                                        <!-- <span id="CostAfterCouponApply" style="margin-left:36px;display:none;"></span> -->
+                                        <p style="font-weight:600;display: none;" id="OrignalCostParagraph">Pay ₹ <span id="OrignalCost"></span> total</p>
+
+                                        <button class="buttonpay" id="makePaymentBtn" onclick="makePayment()" style="display: none;">
+                                <span class="button__text">
+                                    Make Payment <span id="rupeeSign" style="display: none;"> Of ₹ </span><span id="totalAmount"></span>
+                                <svg class="button__svg" role="presentational" viewBox="0 0 600 600">
+                                    <defs>
+                                        <clipPath id="myClip">
+                                            <rect x="0" y="0" width="100%" height="50%" />
+                                        </clipPath>
+                                    </defs>
+                                    <g clip-path="url(#myClip)">
+                                        <g id="money">
+                                            <path d="M441.9,116.54h-162c-4.66,0-8.49,4.34-8.62,9.83l.85,278.17,178.37,2V126.37C450.38,120.89,446.56,116.52,441.9,116.54Z" fill="#699e64" stroke="#323c44" stroke-miterlimit="10" stroke-width="14" />
+                                            <path d="M424.73,165.49c-10-2.53-17.38-12-17.68-24H316.44c-.09,11.58-7,21.53-16.62,23.94-3.24.92-5.54,4.29-5.62,8.21V376.54H430.1V173.71C430.15,169.83,427.93,166.43,424.73,165.49Z" fill="#699e64" stroke="#323c44" stroke-miterlimit="10" stroke-width="14" />
+                                        </g>
+                                        <g id="creditcard">
+                                            <path d="M372.12,181.59H210.9c-4.64,0-8.45,4.34-8.58,9.83l.85,278.17,177.49,2V191.42C380.55,185.94,376.75,181.57,372.12,181.59Z" fill="#a76fe2" stroke="#323c44" stroke-miterlimit="10" stroke-width="14" />
+                                            <path d="M347.55,261.85H332.22c-3.73,0-6.76-3.58-6.76-8v-35.2c0-4.42,3-8,6.76-8h15.33c3.73,0,6.76,3.58,6.76,8v35.2C354.31,258.27,351.28,261.85,347.55,261.85Z" fill="#ffdc67" />
+                                            <path d="M249.73,183.76h28.85v274.8H249.73Z" fill="#323c44" />
+                                        </g>
+                                    </g>
+                                    <g id="wallet">
+                                        <path d="M478,288.23h-337A28.93,28.93,0,0,0,112,317.14V546.2a29,29,0,0,0,28.94,28.95H478a29,29,0,0,0,28.95-28.94h0v-229A29,29,0,0,0,478,288.23Z" fill="#a4bdc1" stroke="#323c44" stroke-miterlimit="10" stroke-width="14" />
+                                        <path d="M512.83,382.71H416.71a28.93,28.93,0,0,0-28.95,28.94h0V467.8a29,29,0,0,0,28.95,28.95h96.12a19.31,19.31,0,0,0,19.3-19.3V402a19.3,19.3,0,0,0-19.3-19.3Z" fill="#a4bdc1" stroke="#323c44" stroke-miterlimit="10" stroke-width="14" />
+                                        <path d="M451.46,435.79v7.88a14.48,14.48,0,1,1-29,0v-7.9a14.48,14.48,0,0,1,29,0Z" fill="#a4bdc1" stroke="#323c44" stroke-miterlimit="10" stroke-width="14" />
+                                        <path d="M147.87,541.93V320.84c-.05-13.2,8.25-21.51,21.62-24.27a42.71,42.71,0,0,1,7.14-1.32l-29.36-.63a67.77,67.77,0,0,0-9.13.45c-13.37,2.75-20.32,12.57-20.27,25.77l.38,221.24c-1.57,15.44,8.15,27.08,25.34,26.1l33-.19c-15.9,0-28.78-10.58-28.76-25.93Z" fill="#7b8f91" />
+                                        <path d="M148.16,343.22a6,6,0,0,0-6,6v92a6,6,0,0,0,12,0v-92A6,6,0,0,0,148.16,343.22Z" fill="#323c44" />
+                                    </g>
+    
+                                </svg>
+                            </button>
+
+                                    </div>
+                                    <div class="form-group col-md-1" id="hidden"></div>
+                                    <div class="col-sm-10" id="statusdiv" style="display: none; text-align: center;font-weight: 800; background-color: rgb(235, 232, 232) ; border-radius: 5px; padding: 3px;">
+                                        <span id="status" style="padding: 2%;"></span>
+                                    </div>
+                                </div>
+                                </form>
+                            </div>
+                            <!--team col end-->
+                        </div>
+
+                    </div>
+                    <div class="col-sm-12  col-md-12 col-xl-12 col-lg-12 card card-primary card-outline" id="thanksdiv" style="
+                  background: white;
+                  border-radius: 18px;display: none;margin-top: 110px">
+                        <div class="form-group" style="text-align: center;">
+                            <div class="form-group col-md-12" style="padding-bottom: 20px !important;">
+                                <img src="/images/subscribed.png" height="160px" width="160px" />
+                                <h5 style="font-size: 15px;
+                      line-height: 21px;
+                      margin-top: 10px;
+                      color: grey" id="thanksmsg">Thank you for choosing Taxso. Shortly you will receive your credentials on your registered mail
+                                </h5>
+                                <a href="index.html"><button class="btn btn-success" style="padding: 5px 49px;">OK</button></div></a>
+
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Modal -->
+            <div class="modal fade" id="OTPConfirmationModel" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true" style="position: fixed;">
+                <div class="modal-dialog">
+                    <div class="modal-content" style="background-color: aliceblue">
+                        <!-- <div class="modal-header">
+                            <h2 class="modal-title" id="staticBackdropLabel" style="color: red;">Verify Your Email</h2>
+                            <button class="btn-close" data-bs-dismiss="modal" aria-label="Close">X</button>
+                        </div> -->
+                        <div class="modal-header" style="display: flex;align-items: center;">
+                            <h3 class="modal-title" id="staticBackdropLabel" style="color: red;">Verify Your Email</h3>
+                            <button id="closeOTPpopbtn" type="button" style="color: #000;margin-left: 62%; border: 0;border-radius: .25rem;opacity:.7; box-sizing: content-box;width: 1em; height: 2em;background-color: aliceblue;" class="btn-close" data-bs-dismiss="modal" aria-label="Close"
+                                onclick="closeOtpModal()">X</button>
+                        </div>
+                        <div class="modal-body" style="border: none;">
+                            <h4 id="subotpmsgheading" style="text-align: center;color:black">Please enter the OTP that has been sent to <span id="emailToSpan" style="font-weight: bold;font-size: smaller !important;"></span></h4>
+                            <div style="text-align: center;"><label id="OTP" style="display: none;"></label></div>
+                            <label id="WrongOTP" style="display: none; color: #e52d27; margin-left: 43%;">Wrong OTP</label>
+                            <p style="color: black;opacity:0.5;font-size: 12px;text-align: center;">The OTP is valid for a duration of 5 minutes</p>
+                            <div id="otpfields" class="inputs d-flex flex-row justify-content-center mt-2" style="display: flex; justify-content: center; align-items: center;">
+                                <input class="m-2 text-center form-control rounded" style="width: 40px;height: 40px;margin: 0.5rem;" type="text" id="firstotp" maxlength="1" />
+                                <input class="m-2 text-center form-control rounded" type="text" style="width: 40px;height: 40px;margin: 0.5rem;" id="secondotp" maxlength="1" />
+                                <input class="m-2 text-center form-control rounded" type="text" style="width: 40px;height: 40px;margin: 0.5rem;" id="thirdotp" maxlength="1" />
+                                <input class="m-2 text-center form-control rounded" type="text" style="width: 40px;height: 40px;margin: 0.5rem;" id="fourthotp" maxlength="1" />
+                            </div>
+                        </div>
+                        <div class="modal-footer" style="border: none;">
+                            <button type="button" class="btn btn-secondary" id="resendOtpButton" style="display: none;" onclick="ResendEmail()">Resend</button>
+                            <div id="timer" style="display: inline-block !important;"><span id="timerCountdown">60</span> seconds</div>
+                            <button class="btn btn-danger px-4 validate" id="validatebutton" onclick="VerifyOTP()">Verify</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- 
+
+<div id="otp" class="inputs d-flex flex-row justify-content-center mt-2"> 
+  <input class="m-2 text-center form-control rounded" type="text" id="first" maxlength="1" />
+   <input class="m-2 text-center form-control rounded" type="text" id="second" maxlength="1" /> 
+   <input class="m-2 text-center form-control rounded" type="text" id="third" maxlength="1" /> 
+   <input class="m-2 text-center form-control rounded" type="text" id="fourth" maxlength="1" /> 
+   <input class="m-2 text-center form-control rounded" type="text" id="fifth" maxlength="1" /> 
+   <input class="m-2 text-center form-control rounded" type="text" id="sixth" maxlength="1" />
+</div>
+
+
+ -->
+
+
+
+
+
+
+        </div>
+    </div>
+    </div>
+    <footer class="footer" style="display: none;">
+        <div class="container text-center">
+            <span class="alo">AROHAR TECHNOLOGIES PVT. LTD</span>
+            <!-- <ul class="social list-inline">
+                    <li><a href="#"><i class="icon icon-social-twitter"></i></a></li>
+                    <li><a href="#"><i class="icon icon-social-facebook"></i></a></li>
+                    <li><a href="#"><i class="icon icon-social-dribbble"></i></a></li>
+                </ul> -->
+            <span class="copyright">&copy; Copyright 2021. <a href="privacypolicy.html" style="color: white; font-weight: 800;"> Privacy Policy</a> </span>
+        </div>
+    </footer>
+    <div id="emailtemplatesubscription" style="display:none;">
+        <script async src="https://cdn.ampproject.org/v0.js"></script>
+        <style>
+            .es-desk-hidden {
+                display: none;
+                float: left;
+                overflow: hidden;
+                width: 0;
+                max-height: 0;
+                line-height: 0;
+            }
+            
+            s {
+                text-decoration: line-through;
+            }
+            
+            table {
+                border-collapse: collapse;
+                border-spacing: 0px;
+            }
+            
+            table td,
+            html,
+            body,
+            .es-wrapper {
+                padding: 0;
+                margin: 0;
+            }
+            
+            .es-content,
+            .es-header,
+            .es-footer {
+                table-layout: fixed;
+                width: 100%;
+            }
+            
+            p,
+            hr {
+                margin: 0;
+            }
+            
+            .es-left {
+                float: left;
+            }
+            
+            .es-right {
+                float: right;
+            }
+            
+            .es-p5 {
+                padding: 5px;
+            }
+            
+            .es-p5t {
+                padding-top: 5px;
+            }
+            
+            .es-p5b {
+                padding-bottom: 5px;
+            }
+            
+            .es-p5l {
+                padding-left: 5px;
+            }
+            
+            .es-p5r {
+                padding-right: 5px;
+            }
+            
+            .es-p10 {
+                padding: 10px;
+            }
+            
+            .es-p10t {
+                padding-top: 10px;
+            }
+            
+            .es-p10b {
+                padding-bottom: 10px;
+            }
+            
+            .es-p10l {
+                padding-left: 10px;
+            }
+            
+            .es-p10r {
+                padding-right: 10px;
+            }
+            
+            .es-p15 {
+                padding: 15px;
+            }
+            
+            .es-p15t {
+                padding-top: 15px;
+            }
+            
+            .es-p15b {
+                padding-bottom: 15px;
+            }
+            
+            .es-p15l {
+                padding-left: 15px;
+            }
+            
+            .es-p15r {
+                padding-right: 15px;
+            }
+            
+            .es-p20 {
+                padding: 20px;
+            }
+            
+            .es-p20t {
+                padding-top: 20px;
+            }
+            
+            .es-p20b {
+                padding-bottom: 20px;
+            }
+            
+            .es-p20l {
+                padding-left: 20px;
+            }
+            
+            .es-p20r {
+                padding-right: 20px;
+            }
+            
+            .es-p25 {
+                padding: 25px;
+            }
+            
+            .es-p25t {
+                padding-top: 25px;
+            }
+            
+            .es-p25b {
+                padding-bottom: 25px;
+            }
+            
+            .es-p25l {
+                padding-left: 25px;
+            }
+            
+            .es-p25r {
+                padding-right: 25px;
+            }
+            
+            .es-p30 {
+                padding: 30px;
+            }
+            
+            .es-p30t {
+                padding-top: 30px;
+            }
+            
+            .es-p30b {
+                padding-bottom: 30px;
+            }
+            
+            .es-p30l {
+                padding-left: 30px;
+            }
+            
+            .es-p30r {
+                padding-right: 30px;
+            }
+            
+            .es-p35 {
+                padding: 35px;
+            }
+            
+            .es-p35t {
+                padding-top: 35px;
+            }
+            
+            .es-p35b {
+                padding-bottom: 35px;
+            }
+            
+            .es-p35l {
+                padding-left: 35px;
+            }
+            
+            .es-p35r {
+                padding-right: 35px;
+            }
+            
+            .es-p40 {
+                padding: 40px;
+            }
+            
+            .es-p40t {
+                padding-top: 40px;
+            }
+            
+            .es-p40b {
+                padding-bottom: 40px;
+            }
+            
+            .es-p40l {
+                padding-left: 40px;
+            }
+            
+            .es-p40r {
+                padding-right: 40px;
+            }
+            
+            .es-menu td {
+                border: 0;
+            }
+            
+            p,
+            ul li,
+            ol li {
+                font-family: arial, "helvetica neue", helvetica, sans-serif;
+                line-height: 150%;
+            }
+            
+            ul li,
+            ol li {
+                margin-bottom: 15px;
+                margin-left: 0;
+            }
+            
+            .es-menu td a {
+                text-decoration: none;
+                display: block;
+                font-family: arial, "helvetica neue", helvetica, sans-serif;
+            }
+            
+            .es-menu amp-img,
+            .es-button amp-img {
+                vertical-align: middle;
+            }
+            
+            .es-wrapper {
+                width: 100%;
+                height: 100%;
+                background-repeat: no-repeat;
+                background-position: center top;
+            }
+            
+            .es-header {
+                background-color: transparent;
+            }
+            
+            .es-header-body {
+                background-color: transparent;
+            }
+            
+            .es-header-body p,
+            .es-header-body ul li,
+            .es-header-body ol li {
+                color: #ffffff;
+                font-size: 14px;
+            }
+            
+            .es-header-body a {
+                color: #ffffff;
+                font-size: 14px;
+            }
+            
+            .es-content-body {
+                background-color: #ffffff;
+            }
+            
+            .es-content-body p,
+            .es-content-body ul li,
+            .es-content-body ol li {
+                color: #666666;
+                font-size: 16px;
+            }
+            
+            .es-content-body a {
+                color: #999999;
+                font-size: 16px;
+            }
+            
+            .es-footer {
+                background-color: transparent;
+            }
+            
+            .es-footer-body {
+                background-color: transparent;
+            }
+            
+            .es-footer-body p,
+            .es-footer-body ul li,
+            .es-footer-body ol li {
+                color: #efefef;
+                font-size: 14px;
+            }
+            
+            .es-footer-body a {
+                color: #efefef;
+                font-size: 14px;
+            }
+            
+            .es-infoblock,
+            .es-infoblock p,
+            .es-infoblock ul li,
+            .es-infoblock ol li {
+                line-height: 120%;
+                font-size: 12px;
+                color: #ffffff;
+            }
+            
+            .es-infoblock a {
+                font-size: 12px;
+                color: #ffffff;
+            }
+            
+            .es-header-body h1 a,
+            .es-content-body h1 a,
+            .es-footer-body h1 a {
+                font-size: 30px;
+            }
+            
+            .es-header-body h2 a,
+            .es-content-body h2 a,
+            .es-footer-body h2 a {
+                font-size: 24px;
+            }
+            
+            .es-header-body h3 a,
+            .es-content-body h3 a,
+            .es-footer-body h3 a {
+                font-size: 20px;
+            }
+            
+            a.es-button,
+            button.es-button {
+                border-style: solid;
+                border-color: #333333;
+                border-width: 8px 30px 8px 30px;
+                display: inline-block;
+                background: #333333;
+                border-radius: 5px;
+                font-size: 16px;
+                font-family: arial, "helvetica neue", helvetica, sans-serif;
+                font-weight: normal;
+                font-style: normal;
+                line-height: 120%;
+                color: #ffffff;
+                text-decoration: none;
+                width: auto;
+                text-align: center;
+            }
+            
+            .es-button-border {
+                border-style: solid solid solid solid;
+                border-color: #333333 #333333 #333333 #333333;
+                background: #333333;
+                border-width: 0px 0px 0px 0px;
+                display: inline-block;
+                border-radius: 5px;
+                width: auto;
+            }
+            
+            .es-p-default {
+                padding-top: 20px;
+                padding-right: 40px;
+                padding-bottom: 0px;
+                padding-left: 40px;
+            }
+            
+            .es-p-all-default {
+                padding: 0px;
+            }
+            
+            @media only screen and (max-width: 600px) {
+                p,
+                ul li,
+                ol li,
+                a {
+                    line-height: 150%;
+                }
+                h1,
+                h2,
+                h3,
+                h1 a,
+                h2 a,
+                h3 a {
+                    line-height: 120%;
+                }
+                .es-header-body h1 a,
+                .es-content-body h1 a,
+                .es-footer-body h1 a {
+                    font-size: 38px;
+                }
+                .es-header-body h2 a,
+                .es-content-body h2 a,
+                .es-footer-body h2 a {
+                    font-size: 30px;
+                }
+                .es-header-body h3 a,
+                .es-content-body h3 a,
+                .es-footer-body h3 a {
+                    font-size: 20px;
+                }
+                .es-menu td a {
+                    font-size: 14px;
+                }
+                .es-header-body p,
+                .es-header-body ul li,
+                .es-header-body ol li,
+                .es-header-body a {
+                    font-size: 14px;
+                }
+                .es-content-body p,
+                .es-content-body ul li,
+                .es-content-body ol li,
+                .es-content-body a {
+                    font-size: 14px;
+                }
+                .es-footer-body p,
+                .es-footer-body ul li,
+                .es-footer-body ol li,
+                .es-footer-body a {
+                    font-size: 14px;
+                }
+                .es-infoblock p,
+                .es-infoblock ul li,
+                .es-infoblock ol li,
+                .es-infoblock a {
+                    font-size: 12px;
+                }
+                *[class="gmail-fix"] {
+                    display: none;
+                }
+                .es-m-txt-c,
+                .es-m-txt-c h1,
+                .es-m-txt-c h2,
+                .es-m-txt-c h3 {
+                    text-align: center;
+                }
+                .es-m-txt-r,
+                .es-m-txt-r h1,
+                .es-m-txt-r h2,
+                .es-m-txt-r h3 {
+                    text-align: right;
+                }
+                .es-m-txt-l,
+                .es-m-txt-l h1,
+                .es-m-txt-l h2,
+                .es-m-txt-l h3 {
+                    text-align: left;
+                }
+                .es-m-txt-r amp-img {
+                    float: right;
+                }
+                .es-m-txt-c amp-img {
+                    margin: 0 auto;
+                }
+                .es-m-txt-l amp-img {
+                    float: left;
+                }
+                .es-button-border {
+                    display: block;
+                }
+                a.es-button,
+                button.es-button {
+                    font-size: 18px;
+                    display: block;
+                    border-left-width: 0px;
+                    border-right-width: 0px;
+                }
+                .es-btn-fw {
+                    border-width: 10px 0px;
+                    text-align: center;
+                }
+                .es-adaptive table,
+                .es-btn-fw,
+                .es-btn-fw-brdr,
+                .es-left,
+                .es-right {
+                    width: 100%;
+                }
+                .es-content table,
+                .es-header table,
+                .es-footer table,
+                .es-content,
+                .es-footer,
+                .es-header {
+                    width: 100%;
+                    max-width: 600px;
+                }
+                .es-adapt-td {
+                    display: block;
+                    width: 100%;
+                }
+                .adapt-img {
+                    width: 100%;
+                    height: auto;
+                }
+                td.es-m-p0 {
+                    padding: 0px;
+                }
+                td.es-m-p0r {
+                    padding-right: 0px;
+                }
+                td.es-m-p0l {
+                    padding-left: 0px;
+                }
+                td.es-m-p0t {
+                    padding-top: 0px;
+                }
+                td.es-m-p0b {
+                    padding-bottom: 0;
+                }
+                td.es-m-p20b {
+                    padding-bottom: 20px;
+                }
+                .es-mobile-hidden,
+                .es-hidden {
+                    display: none;
+                }
+                tr.es-desk-hidden,
+                td.es-desk-hidden,
+                table.es-desk-hidden {
+                    width: auto;
+                    overflow: visible;
+                    float: none;
+                    max-height: inherit;
+                    line-height: inherit;
+                }
+                tr.es-desk-hidden {
+                    display: table-row;
+                }
+                table.es-desk-hidden {
+                    display: table;
+                }
+                td.es-desk-menu-hidden {
+                    display: table-cell;
+                }
+                .es-menu td {
+                    width: 1%;
+                }
+                table.es-table-not-adapt,
+                .esd-block-html table {
+                    width: auto;
+                }
+                table.es-social {
+                    display: inline-block;
+                }
+                table.es-social td {
+                    display: inline-block;
+                }
+            }
+        </style>
+        <div id="bgColor" class="es-wrapper-color">
+            <table class="es-wrapper" width="100%" cellspacing="0" cellpadding="0" style="background-position: center top; background-color: #223748 !important;">
+                <tr>
+                    <td valign="top">
+                        <table class="es-header" cellspacing="0" cellpadding="0" align="center">
+                            <tr>
+                                <td align="center">
+                                    <table class="es-header-body" style="background-color: transparent" width="600" cellspacing="0" cellpadding="0" align="center">
+                                        <tr>
+                                            <td class="es-p20t es-p40b es-p20r es-p20l" style="background-repeat: no-repeat;padding-bottom: 10px;" align="left">
+                                                <table width="100%" cellspacing="0" cellpadding="0">
+                                                    <tr>
+                                                        <td width="560" valign="top" align="center">
+                                                            <table width="100%" cellspacing="0" cellpadding="0" role="presentation">
+                                                                <tr>
+                                                                    <td class="es-p30t es-p5b" align="center">
+                                                                        <h2 style="
+                                                  color: #ffffff;
+                                                  font-size: 50px;
+                                                  font-family: georgia, times,
+                                                    'times new roman', serif;
+                                                  line-height: 57px;
+                                                  margin: 20px 0px 0px 0px;
+                                                ">
+                                                                            Welcome<br />
+                                                                        </h2>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td align="center" style="font-size: 0">
+                                                                        <amp-img src="https://ugopmi.stripocdn.email/content/guids/CABINET_6ebdc9f620b6c98ec92e579217982603/images/43981525778959712.png" alt="to" style="display: block" title="to" width="42" height="32"></amp-img>
+                                                                    </td>
+                                                                </tr>
+                                                                <!-- <tr>
+                                            <td class="es-p25b" align="center">
+                                              <p style="color: #ffffff; font-size: 16px">
+                                                Awesome Accounting And Billing Software
+                                              </p>
+                                            </td>
+                                          </tr> -->
+                                                            </table>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                        </table>
+                        <table class="es-content" cellspacing="0" cellpadding="0" align="center">
+                            <tr>
+                                <td align="center">
+                                    <table class="es-content-body" width="600" cellspacing="0" cellpadding="0" bgcolor="#ffffff" align="center">
+                                        <tr>
+                                            <td class="es-p30t es-p40r es-p40l" style="background-repeat: no-repeat;padding: 30px 40px 0px 40px;" align="left">
+                                                <table width="100%" cellspacing="0" cellpadding="0">
+                                                    <tr>
+                                                        <td width="520" valign="top" align="center">
+                                                            <table width="100%" cellspacing="0" cellpadding="0" role="presentation">
+                                                                <tr>
+                                                                    <td class="es-p15b" align="center">
+                                                                        <h1 style="
+                                                color: #ffffff;
+                                                font-size: 69px;
+                                                font-family: georgia, times,
+                                                  'times new roman', serif;
+                                                line-height: 69px;
+                                                margin: 0px;
+                                                position: relative;
+                                              ">
+                                                                            <!-- <span style="
+                                            color: red;
+                                        ">Tax</span><span style="color: black;">So <span style="position: absolute;
+    font-size: 28px;
+    top: -15px;">&#174;</span></span> --><img src="https://www.arohar.com/images/Taxso_Logo_Razor.png" height="87px" />
+                                                                        </h1>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td class="es-m-txt-l" align="left">
+                                                                        <h2 style="font-size: 28px;color: #333333;">
+                                                                            We’re very happy you’re here.
+                                                                        </h2>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td class="es-m-txt-l" align="left" style="font-size: 0">
+                                                                        <a target="_blank" href="https://esputnik.com/viewInBrowser">
+                                                                            <amp-img src="https://ugopmi.stripocdn.email/content/guids/CABINET_6ebdc9f620b6c98ec92e579217982603/images/99301524564595313.png" alt style="display: block" width="75" height="9"></amp-img>
+                                                                        </a>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td class="es-p15t" align="left">
+                                                                        <p style="color: #666666;">
+                                                                            <span class="product-description">Thank you for subscribing to TaxSo. Your login details are listed below. We suggest you change your password after logging in for the first time.</span
+                                                >
+                                              </p>
+                                            </td>
+                                          </tr>
+                                          <tr>
+                                            <td><h3 style="color: #666666;" >Your Account Information:</h3></td>
+                                          </tr>
+                                          <tr>
+                                            <td class="es-p25t es-p10b" align="left">
+                                              <p style="color: #666666;">Company Name :  <span id="TemplateCompanyName" style="font-size: medium;"></span></p>
+                                                                        <p style="color: #666666;">
+                                                                            Email : <span id="TemplateEmailId" style="font-size: medium;"></span>
+                                                                        </p>
+                                                                        <p style="color: #666666;">
+                                                                            Plan : <span id="TemplatePlan" style="font-size: medium;"></span>
+                                                                        </p>
+                                                                        <p style="color: #666666;">
+                                                                            Payment Ref No. : <span id="TemplatePaymentNo" style="font-size: medium;"></span>
+                                                                        </p>
+                                                                        <h4 style="color: #666666;font-weight: 600;padding-top: 1.5%;">Login Credentials:</h4>
+                                                                        <p style="color: #666666;">User Name : <span id="Username" style="font-size: medium;"></span></p>
+                                                                        <p style="color: #666666;">
+                                                                            Password : <span id="Password" style="font-size: medium;"></span>
+                                                                        </p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td class="es-p15t" align="left">
+                                                                        <p style="color: #666666;">
+                                                                            <span class="product-description">In case you have any queries, please feel free to reply to this email.
+                                                  we're always happy to help out.</span
+                                                >
+                                              </p>
+                                            </td>
+                                          </tr>
+                                        </table>
+                                      </td>
+                                    </tr>
+                                  </table>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td class="es-p20t es-p40b es-p40r es-p40l" style="padding: 10px 40px 10px 40px;" align="left">
+                                  <table width="100%" cellspacing="0" cellpadding="0">
+                                    <tr>
+                                      <td width="520" valign="top" align="center">
+                                        <table
+                                          width="100%"
+                                          cellspacing="0"
+                                          cellpadding="0"
+                                          role="presentation"
+                                        >
+                                          <tr>
+                                            <td class="es-p5t" align="left">
+                                              <span class="es-button-border"
+                                                ><a
+                                                  style="border-style: solid;
+                                                  border-color: #ff0000;
+                                                  border-width: 8px 30px 8px 30px;
+                                                  display: inline-block;
+                                                  background: #ff0000;
+                                                  border-radius: 5px;
+                                                  font-size: 16px;
+                                                  font-family: arial, 'helvetica neue', helvetica, sans-serif;
+                                                  font-weight: normal;
+                                                  font-style: normal;
+                                                  line-height: 120%;
+                                                  color: #ffffff;
+                                                  text-decoration: none;
+                                                  width: auto;
+                                                  text-align: center;"
+                                                  href="https://portal.taxso.in/"
+                                                  class="es-button"
+                                                  target="_blank"
+                                                  >Access Account</a
+                                                ></span
+                                              >
+                                            </td>
+                                          </tr>
+                                        </table>
+                                      </td>
+                                    </tr>
+                                  </table>
+                                </td>
+                              </tr>
+                            </table>
+                          </td>
+                        </tr>
+                      </table>
+                      <!-- <table
+                        class="es-content"
+                        cellspacing="0"
+                        cellpadding="0"
+                        align="center"
+                      >
+                        <tr></tr>
+                        <tr>
+                          <td align="center">
+                            <table
+                              class="es-content-body"
+                              width="600"
+                              cellspacing="0"
+                              cellpadding="0"
+                              bgcolor="#ffffff"
+                              align="center"
+                            >
+                              <tr>
+                                <td
+                                  style="background-color: #223748;display: flex;"
+                                  bgcolor="#223748"
+                                  align="left"
+                                >
+                                  <table
+                                    class="es-left"
+                                    cellspacing="0"
+                                    cellpadding="0"
+                                    align="left"
+                                  >
+                                    <tr>
+                                      <td class="es-m-p0r" width="600" align="center">
+                                        <table
+                                          width="100%"
+                                          cellspacing="0"
+                                          cellpadding="0"
+                                          role="presentation"
+                                        >
+                                          <tr>
+                                            <td align="right" style="font-size: 0">
+                                              <a
+                                                target="_blank"
+                                                href="#"
+                                                ><img
+                                                  class="adapt-img"
+                                                  src="https://www.arohar.com/images/Landingpage19Oct.jpg"
+                                                  alt
+                                                  style="display: block;width: 100%;height: 36.8vh;"
+                                                  layout="responsive"
+                                                ></a>
+                                            </td>
+                                          </tr>
+                                        </table>
+                                      </td>
+                                    </tr>
+                                  </table>
+                                  
+                                </td>
+                              </tr>
+                            </table>
+                          </td>
+                        </tr>
+                      </table> -->
+                      <table
+                        class="es-content"
+                        cellspacing="0"
+                        cellpadding="0"
+                        align="center"
+                      >
+                        <tr>
+                          <td align="center">
+                            <table
+                              class="es-content-body"
+                              width="600"
+                              cellspacing="0"
+                              cellpadding="0"
+                              bgcolor="#ffffff"
+                              align="center"
+                            >
+                              <tr>
+                                <td class="es-p20t es-p40r es-p40l" align="left" style="padding: 0px 40px 0px 40px;">
+                                  <table width="100%" cellspacing="0" cellpadding="0">
+                                    <tr>
+                                      <td width="520" valign="top" align="center">
+                                        <table
+                                          width="100%"
+                                          cellspacing="0"
+                                          cellpadding="0"
+                                          role="presentation"
+                                        >
+                                          <tr>
+                                            <td align="left" style="padding: 20px 40px 0px 0px;"><h2 style="color: #333333;">Get our App</h2></td>
+                                          </tr>
+                                        </table>
+                                      </td>
+                                    </tr>
+                                  </table>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td class="es-p20t es-p40b es-p40r es-p40l" align="left" style="padding: 0px 40px 40px 40px;">
+                                  <!--[if mso]><table width="520" cellpadding="0" cellspacing="0"><tr><td width="150" valign="top"><![endif]-->
+                                  <table
+                                    class="es-left"
+                                    cellspacing="0"
+                                    cellpadding="0"
+                                    align="left"
+                                    style="display: none;"
+                                  >
+                                    <tr>
+                                      <td
+                                        class="es-m-p0r es-m-p20b"
+                                        width="130"
+                                        align="center"
+                                      >
+                                        <table
+                                          width="100%"
+                                          cellspacing="0"
+                                          cellpadding="0"
+                                          role="presentation"
+                                        >
+                                          <tr>
+                                            <td align="center" style="font-size: 0">
+                                              <a
+                                                target="_blank"
+                                                href="#"
+                                                ><img
+                                                  class="adapt-img"
+                                                  src="https://ugopmi.stripocdn.email/content/guids/CABINET_6ebdc9f620b6c98ec92e579217982603/images/81101525781549293.png"
+                                                  alt
+                                                  style="display: block;padding: 0px 40px 10px 40px;width: 100%;"
+                                               ></a>
+                                            </td>
+                                          </tr>
+                                        </table>
+                                      </td>
+                                      <td class="es-hidden" width="20"></td>
+                                    </tr>
+                                  </table>
+                                  <!--[if mso]></td>
+          <td width="130" valign="top"><![endif]-->
+                                  <table
+                                    class="es-left"
+                                    cellspacing="0"
+                                    cellpadding="0"
+                                    align="left"
+                                  >
+                                    <tr>
+                                      <td class="es-m-p20b" width="130" align="center">
+                                        <table
+                                          width="100%"
+                                          cellspacing="0"
+                                          cellpadding="0"
+                                          role="presentation"
+                                        >
+                                          <tr>
+                                            <td align="center" style="font-size: 0">
+                                              <a
+                                                target="_blank"
+                                                href="https://play.google.com/store/apps/details?id=in.taxso.portal.tb"
+                                                ><img
+                                                  class="adapt-img"
+                                                  src="https://ugopmi.stripocdn.email/content/guids/CABINET_6ebdc9f620b6c98ec92e579217982603/images/74371525781549159.png"
+                                                  alt
+                                                  style="display: block;width: 100%;"
+                                                  layout="responsive"
+                                                ></a>
+                                            </td>
+                                          </tr>
+                                        </table>
+                                      </td>
+                                    </tr>
+                                  </table>
+                                  <!--[if mso]></td><td width="20"></td>
+          <td width="220" valign="top"><![endif]-->
+                                  <!-- <table
+                                    class="es-right"
+                                    cellspacing="0"
+                                    cellpadding="0"
+                                    align="right"
+                                  >
+                                    <tr>
+                                      <td width="220" align="center">
+                                        <table
+                                          width="100%"
+                                          cellspacing="0"
+                                          cellpadding="0"
+                                          role="presentation"
+                                        >
+                                          <tr>
+                                            <td class="es-m-txt-c" align="left">
+                                              <p style="font-size: 14px;color: #666666;margin-top: 5px;">
+                                                Download app to follow updates. Our app is ethical.
+                                              </p>
+                                            </td>
+                                          </tr>
+                                        </table>
+                                      </td>
+                                    </tr>
+                                  </table> -->
+                                  <!--[if mso]></td></tr></table><![endif]-->
+                                </td>
+                              </tr>
+                            </table>
+                          </td>
+                        </tr>
+                      </table>
+                      <table
+                        cellpadding="0"
+                        cellspacing="0"
+                        class="es-footer"
+                        align="center"
+                      >
+                        <tr>
+                          <td align="center">
+                            <table
+                              class="es-footer-body"
+                              width="600"
+                              cellspacing="0"
+                              cellpadding="0"
+                              align="center"
+                            >
+                              <tr>
+                                <td class="es-p20t es-p10r es-p10l" style="padding: 15px 10px 0px 10px;" align="left">
+                                  <table width="100%" cellspacing="0" cellpadding="0">
+                                    <tr>
+                                      <td width="580" valign="top" align="center">
+                                        <table
+                                          width="100%"
+                                          cellspacing="0"
+                                          cellpadding="0"
+                                          role="presentation"
+                                        >
+                                          <!-- <tr>
+                                            <td
+                                              class="es-p10b es-m-txt-c"
+                                              align="center"
+                                              style="font-size: 0;padding-bottom: 10px;"
+                                            >
+                                              <table
+                                                class="es-table-not-adapt es-social"
+                                                cellspacing="0"
+                                                cellpadding="0"
+                                                role="presentation"
+                                              >
+                                                <tr>
+                                                  <td
+                                                    class="es-p10r"
+                                                    valign="top"
+                                                    align="center"
+                                                    style="padding-right: 10px;"
+                                                  >
+                                                    <img
+                                                      title="Instagram"
+                                                      src="https://ugopmi.stripocdn.email/content/assets/img/social-icons/rounded-white-bordered/instagram-rounded-white-bordered.png"
+                                                      alt="Inst"
+                                                      style="width: 32px;height: 32px;"
+                                                    ></img>
+                                                  </td>
+                                                  <td
+                                                    class="es-p10r"
+                                                    valign="top"
+                                                    align="center"
+                                                    style="padding-right: 10px;"
+                                                  >
+                                                    <img
+                                                      title="Youtube"
+                                                      src="https://ugopmi.stripocdn.email/content/assets/img/social-icons/rounded-white-bordered/youtube-rounded-white-bordered.png"
+                                                      alt="Yt" 
+                                                      style="width: 32px;height: 32px;"
+                                                    ></img>
+                                                  </td>
+                                                  <td
+                                                    class="es-p10r"
+                                                    valign="top"
+                                                    align="center"
+                                                    style="padding-right: 10px;"
+                                                  >
+                                                    <img
+                                                      title="Pinterest"
+                                                      src="https://ugopmi.stripocdn.email/content/assets/img/social-icons/rounded-white-bordered/pinterest-rounded-white-bordered.png"
+                                                      alt="P"
+                                                      style="width: 32px;height: 32px;"
+                                                    ></img>
+                                                  </td>
+                                                  <td valign="top" align="center">
+                                                    <img
+                                                      title="Facebook"
+                                                      src="https://ugopmi.stripocdn.email/content/assets/img/social-icons/rounded-white-bordered/facebook-rounded-white-bordered.png"
+                                                      alt="Fb"
+                                                      style="width: 32px;height: 32px;"
+                                                    ></img>
+                                                  </td>
+                                                </tr>
+                                              </table>
+                                            </td>
+                                          </tr> -->
+                                          <tr>
+                                            <td class="es-p10t es-m-txt-c" align="center" style="padding-top: 10px;color: white;">
+                                              <p>
+                                                You're receiving this email because you
+                                                created an account.
+                                              </p>
+                                              <p>
+                                                  AROHAR TECHNOLOGIES PVT. LTD
+                                                  © Copyright 2024. Privacy Policy
+                                              </p>
+                                            </td>
+                                          </tr>
+                                          <tr>
+                                            <td align="center" class="es-p20t es-m-txt-c" style="padding-top: 20px;">
+                                              <p>
+                                                <a
+                                                  target="_blank"
+                                                  href="https://www.arohar.com/privacypolicy.html"
+                                                  >Privacy Policy</a
+                                                >
+                                                <!-- |
+                                                <a
+                                                  target="_blank"
+                                                  href
+                                                  class="unsubscribe"
+                                                  >Unsubscribe</a
+                                                > -->
+                                              </p>
+                                            </td>
+                                          </tr>
+                                        </table>
+                                      </td>
+                                    </tr>
+                                  </table>
+                                </td>
+                              </tr>
+                            </table>
+                          </td>
+                        </tr>
+                      </table>
+                      <table
+                        class="es-content"
+                        cellspacing="0"
+                        cellpadding="0"
+                        align="center"
+                      >
+                        <tr>
+                          <td align="center">
+                            <table
+                              class="es-content-body"
+                              style="background-color: transparent"
+                              width="600"
+                              cellspacing="0"
+                              cellpadding="0"
+                              align="center"
+                            >
+                              <tr>
+                                <td class="es-p30t es-p30b es-p20r es-p20l" align="left">
+                                  <table width="100%" cellspacing="0" cellpadding="0">
+                                    <tr>
+                                      <td width="560" valign="top" align="center">
+                                        <table
+                                          width="100%"
+                                          cellspacing="0"
+                                          cellpadding="0"
+                                          role="presentation"
+                                        >
+                                          <tr>
+                                            <td
+                                              class="es-infoblock made_with"
+                                              align="center"
+                                              style="font-size: 0"
+                                            >
+                                              <a
+                                                target="_blank"
+                                                href="https://www.arohar.com"
+                                                ><amp-img
+                                                  src="https://www.arohar.com/images/logo.png"
+                                                  alt
+                                                  width="125"
+                                                  height="56"
+                                                ></amp-img
+                                              ></a>
+                                            </td>
+                                          </tr>
+                                        </table>
+                                      </td>
+                                    </tr>
+                                  </table>
+                                </td>
+                              </tr>
+                            </table>
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                </table>
+              </div>
+        </div>
+        <div id="emailtemplateregistered" style="display:none;">
+          <script async src="https://cdn.ampproject.org/v0.js"></script>
+              <style>
+                  .es-desk-hidden {
+                    display: none;
+                    float: left;
+                    overflow: hidden;
+                    width: 0;
+                    max-height: 0;
+                    line-height: 0;
+                  }
+                  s {
+                    text-decoration: line-through;
+                  } 
+                  table {
+                    border-collapse: collapse;
+                    border-spacing: 0px;
+                  }
+                  table td,
+                  html,
+                  body,
+                  .es-wrapper {
+                    padding: 0;
+                    margin: 0;
+                  }
+                  .es-content,
+                  .es-header,
+                  .es-footer {
+                    table-layout: fixed;
+                    width: 100%;
+                  }
+                  p,
+                  hr {
+                    margin: 0;
+                  }
+                  .es-left {
+                    float: left;
+                  }
+                  .es-right {
+                    float: right;
+                  }
+                  .es-p5 {
+                    padding: 5px;
+                  }
+                  .es-p5t {
+                    padding-top: 5px;
+                  }
+                  .es-p5b {
+                    padding-bottom: 5px;
+                  }
+                  .es-p5l {
+                    padding-left: 5px;
+                  }
+                  .es-p5r {
+                    padding-right: 5px;
+                  }
+                  .es-p10 {
+                    padding: 10px;
+                  }
+                  .es-p10t {
+                    padding-top: 10px;
+                  }
+                  .es-p10b {
+                    padding-bottom: 10px;
+                  }
+                  .es-p10l {
+                    padding-left: 10px;
+                  }
+                  .es-p10r {
+                    padding-right: 10px;
+                  }
+                  .es-p15 {
+                    padding: 15px;
+                  }
+                  .es-p15t {
+                    padding-top: 15px;
+                  }
+                  .es-p15b {
+                    padding-bottom: 15px;
+                  }
+                  .es-p15l {
+                    padding-left: 15px;
+                  }
+                  .es-p15r {
+                    padding-right: 15px;
+                  }
+                  .es-p20 {
+                    padding: 20px;
+                  }
+                  .es-p20t {
+                    padding-top: 20px;
+                  }
+                  .es-p20b {
+                    padding-bottom: 20px;
+                  }
+                  .es-p20l {
+                    padding-left: 20px;
+                  }
+                  .es-p20r {
+                    padding-right: 20px;
+                  }
+                  .es-p25 {
+                    padding: 25px;
+                  }
+                  .es-p25t {
+                    padding-top: 25px;
+                  }
+                  .es-p25b {
+                    padding-bottom: 25px;
+                  }
+                  .es-p25l {
+                    padding-left: 25px;
+                  }
+                  .es-p25r {
+                    padding-right: 25px;
+                  }
+                  .es-p30 {
+                    padding: 30px;
+                  }
+                  .es-p30t {
+                    padding-top: 30px;
+                  }
+                  .es-p30b {
+                    padding-bottom: 30px;
+                  }
+                  .es-p30l {
+                    padding-left: 30px;
+                  }
+                  .es-p30r {
+                    padding-right: 30px;
+                  }
+                  .es-p35 {
+                    padding: 35px;
+                  }
+                  .es-p35t {
+                    padding-top: 35px;
+                  }
+                  .es-p35b {
+                    padding-bottom: 35px;
+                  }
+                  .es-p35l {
+                    padding-left: 35px;
+                  }
+                  .es-p35r {
+                    padding-right: 35px;
+                  }
+                  .es-p40 {
+                    padding: 40px;
+                  }
+                  .es-p40t {
+                    padding-top: 40px;
+                  }
+                  .es-p40b {
+                    padding-bottom: 40px;
+                  }
+                  .es-p40l {
+                    padding-left: 40px;
+                  }
+                  .es-p40r {
+                    padding-right: 40px;
+                  }
+                  .es-menu td {
+                    border: 0;
+                  }
+                  p,
+                  ul li,
+                  ol li {
+                    font-family: arial, "helvetica neue", helvetica, sans-serif;
+                    line-height: 150%;
+                  }
+                  ul li,
+                  ol li {
+                    margin-bottom: 15px;
+                    margin-left: 0;
+                  }
+                  .es-menu td a {
+                    text-decoration: none;
+                    display: block;
+                    font-family: arial, "helvetica neue", helvetica, sans-serif;
+                  }
+                  .es-menu amp-img,
+                  .es-button amp-img {
+                    vertical-align: middle;
+                  }
+                  .es-wrapper {
+                    width: 100%;
+                    height: 100%;
+                    background-repeat: no-repeat;
+                    background-position: center top;
+                  }
+                  .es-header {
+                    background-color: transparent;
+                  }
+                  .es-header-body {
+                    background-color: transparent;
+                  }
+                  .es-header-body p,
+                  .es-header-body ul li,
+                  .es-header-body ol li {
+                    color: #ffffff;
+                    font-size: 14px;
+                  }
+                  .es-header-body a {
+                    color: #ffffff;
+                    font-size: 14px;
+                  }
+                  .es-content-body {
+                    background-color: #ffffff;
+                  }
+                  .es-content-body p,
+                  .es-content-body ul li,
+                  .es-content-body ol li {
+                    color: #666666;
+                    font-size: 16px;
+                  }
+                  .es-content-body a {
+                    color: #999999;
+                    font-size: 16px;
+                  }
+                  .es-footer {
+                    background-color: transparent;
+                  }
+                  .es-footer-body {
+                    background-color: transparent;
+                  }
+                  .es-footer-body p,
+                  .es-footer-body ul li,
+                  .es-footer-body ol li {
+                    color: #efefef;
+                    font-size: 14px;
+                  }
+                  .es-footer-body a {
+                    color: #efefef;
+                    font-size: 14px;
+                  }
+                  .es-infoblock,
+                  .es-infoblock p,
+                  .es-infoblock ul li,
+                  .es-infoblock ol li {
+                    line-height: 120%;
+                    font-size: 12px;
+                    color: #ffffff;
+                  }
+                  .es-infoblock a {
+                    font-size: 12px;
+                    color: #ffffff;
+                  }
+                  .es-header-body h1 a,
+                  .es-content-body h1 a,
+                  .es-footer-body h1 a {
+                    font-size: 30px;
+                  }
+                  .es-header-body h2 a,
+                  .es-content-body h2 a,
+                  .es-footer-body h2 a {
+                    font-size: 24px;
+                  }
+                  .es-header-body h3 a,
+                  .es-content-body h3 a,
+                  .es-footer-body h3 a {
+                    font-size: 20px;
+                  }
+                  a.es-button,
+                  button.es-button {
+                    border-style: solid;
+                    border-color: #333333;
+                    border-width: 8px 30px 8px 30px;
+                    display: inline-block;
+                    background: #333333;
+                    border-radius: 5px;
+                    font-size: 16px;
+                    font-family: arial, "helvetica neue", helvetica, sans-serif;
+                    font-weight: normal;
+                    font-style: normal;
+                    line-height: 120%;
+                    color: #ffffff;
+                    text-decoration: none;
+                    width: auto;
+                    text-align: center;
+                  }
+                  .es-button-border {
+                    border-style: solid solid solid solid;
+                    border-color: #333333 #333333 #333333 #333333;
+                    background: #333333;
+                    border-width: 0px 0px 0px 0px;
+                    display: inline-block;
+                    border-radius: 5px;
+                    width: auto;
+                  }
+                  .es-p-default {
+                    padding-top: 20px;
+                    padding-right: 40px;
+                    padding-bottom: 0px;
+                    padding-left: 40px;
+                  }
+                  .es-p-all-default {
+                    padding: 0px;
+                  }
+                  @media only screen and (max-width: 600px) {
+                    p,
+                    ul li,
+                    ol li,
+                    a {
+                      line-height: 150%;
+                    }
+                    h1,
+                    h2,
+                    h3,
+                    h1 a,
+                    h2 a,
+                    h3 a {
+                      line-height: 120%;
+                    }
+                    .es-header-body h1 a,
+                    .es-content-body h1 a,
+                    .es-footer-body h1 a {
+                      font-size: 38px;
+                    }
+                    .es-header-body h2 a,
+                    .es-content-body h2 a,
+                    .es-footer-body h2 a {
+                      font-size: 30px;
+                    }
+                    .es-header-body h3 a,
+                    .es-content-body h3 a,
+                    .es-footer-body h3 a {
+                      font-size: 20px;
+                    }
+                    .es-menu td a {
+                      font-size: 14px;
+                    }
+                    .es-header-body p,
+                    .es-header-body ul li,
+                    .es-header-body ol li,
+                    .es-header-body a {
+                      font-size: 14px;
+                    }
+                    .es-content-body p,
+                    .es-content-body ul li,
+                    .es-content-body ol li,
+                    .es-content-body a {
+                      font-size: 14px;
+                    }
+                    .es-footer-body p,
+                    .es-footer-body ul li,
+                    .es-footer-body ol li,
+                    .es-footer-body a {
+                      font-size: 14px;
+                    }
+                    .es-infoblock p,
+                    .es-infoblock ul li,
+                    .es-infoblock ol li,
+                    .es-infoblock a {
+                      font-size: 12px;
+                    }
+                    *[class="gmail-fix"] {
+                      display: none;
+                    }
+                    .es-m-txt-c,
+                    .es-m-txt-c h1,
+                    .es-m-txt-c h2,
+                    .es-m-txt-c h3 {
+                      text-align: center;
+                    }
+                    .es-m-txt-r,
+                    .es-m-txt-r h1,
+                    .es-m-txt-r h2,
+                    .es-m-txt-r h3 {
+                      text-align: right;
+                    }
+                    .es-m-txt-l,
+                    .es-m-txt-l h1,
+                    .es-m-txt-l h2,
+                    .es-m-txt-l h3 {
+                      text-align: left;
+                    }
+                    .es-m-txt-r amp-img {
+                      float: right;
+                    }
+                    .es-m-txt-c amp-img {
+                      margin: 0 auto;
+                    }
+                    .es-m-txt-l amp-img {
+                      float: left;
+                    }
+                    .es-button-border {
+                      display: block;
+                    }
+                    a.es-button,
+                    button.es-button {
+                      font-size: 18px;
+                      display: block;
+                      border-left-width: 0px;
+                      border-right-width: 0px;
+                    }
+                    .es-btn-fw {
+                      border-width: 10px 0px;
+                      text-align: center;
+                    }
+                    .es-adaptive table,
+                    .es-btn-fw,
+                    .es-btn-fw-brdr,
+                    .es-left,
+                    .es-right {
+                      width: 100%;
+                    }
+                    .es-content table,
+                    .es-header table,
+                    .es-footer table,
+                    .es-content,
+                    .es-footer,
+                    .es-header {
+                      width: 100%;
+                      max-width: 600px;
+                    }
+                    .es-adapt-td {
+                      display: block;
+                      width: 100%;
+                    }
+                    .adapt-img {
+                      width: 100%;
+                      height: auto;
+                    }
+                    td.es-m-p0 {
+                      padding: 0px;
+                    }
+                    td.es-m-p0r {
+                      padding-right: 0px;
+                    }
+                    td.es-m-p0l {
+                      padding-left: 0px;
+                    }
+                    td.es-m-p0t {
+                      padding-top: 0px;
+                    }
+                    td.es-m-p0b {
+                      padding-bottom: 0;
+                    }
+                    td.es-m-p20b {
+                      padding-bottom: 20px;
+                    }
+                    .es-mobile-hidden,
+                    .es-hidden {
+                      display: none;
+                    }
+                    tr.es-desk-hidden,
+                    td.es-desk-hidden,
+                    table.es-desk-hidden {
+                      width: auto;
+                      overflow: visible;
+                      float: none;
+                      max-height: inherit;
+                      line-height: inherit;
+                    }
+                    tr.es-desk-hidden {
+                      display: table-row;
+                    }
+                    table.es-desk-hidden {
+                      display: table;
+                    }
+                    td.es-desk-menu-hidden {
+                      display: table-cell;
+                    }
+                    .es-menu td {
+                      width: 1%;
+                    }
+                    table.es-table-not-adapt,
+                    .esd-block-html table {
+                      width: auto;
+                    }
+                    table.es-social {
+                      display: inline-block;
+                    }
+                    table.es-social td {
+                      display: inline-block;
+                    }
+                   
+                  }
+              </style>
+            <div id="bgColor" class="es-wrapper-color">
+              <table
+                class="es-wrapper"
+                width="100%"
+                cellspacing="0"
+                cellpadding="0"
+                style="background-position: center top; background-color: #223748 !important;"
+              >
+                <tr>
+                  <td valign="top">
+                    <table
+                      class="es-header"
+                      cellspacing="0"
+                      cellpadding="0"
+                      align="center"
+                    >
+                      <tr>
+                        <td align="center">
+                          <table
+                            class="es-header-body"
+                            style="background-color: transparent"
+                            width="600"
+                            cellspacing="0"
+                            cellpadding="0"
+                            align="center"
+                          >
+                            <tr>
+                              <td
+                                class="es-p20t es-p40b es-p20r es-p20l"
+                                style="background-repeat: no-repeat;padding-bottom: 10px;"
+                                align="left"
+                              >
+                                <table width="100%" cellspacing="0" cellpadding="0">
+                                  <tr>
+                                    <td width="560" valign="top" align="center">
+                                      <table
+                                        width="100%"
+                                        cellspacing="0"
+                                        cellpadding="0"
+                                        role="presentation"
+                                      >
+                                        <tr>
+                                          <td class="es-p30t es-p5b" align="center">
+                                            <h2
+                                              style="
+                                                color: #ffffff;
+                                                font-size: 50px;
+                                                font-family: georgia, times,
+                                                  'times new roman', serif;
+                                                line-height: 57px;
+                                                margin: 20px 0px 0px 0px;
+                                              "
+                                            >
+                                              Welcome<br />
+                                            </h2>
+                                          </td>
+                                        </tr>
+                                        <tr>
+                                          <td align="center" style="font-size: 0">
+                                            <amp-img
+                                              src="https://ugopmi.stripocdn.email/content/guids/CABINET_6ebdc9f620b6c98ec92e579217982603/images/43981525778959712.png"
+                                              alt="to"
+                                              style="display: block"
+                                              title="to"
+                                              width="42"
+                                              height="32"
+                                            ></amp-img>
+                                          </td>
+                                        </tr>
+                                        <!-- <tr>
+                                          <td class="es-p25b" align="center">
+                                            <p style="color: #ffffff; font-size: 16px">
+                                              Awesome Accounting And Billing Software
+                                            </p>
+                                          </td>
+                                        </tr> -->
+                                      </table>
+                                    </td>
+                                  </tr>
+                                </table>
+                              </td>
+                            </tr>
+                          </table>
+                        </td>
+                      </tr>
+                    </table>
+                    <table
+                      class="es-content"
+                      cellspacing="0"
+                      cellpadding="0"
+                      align="center"
+                    >
+                      <tr>
+                        <td align="center">
+                          <table
+                            class="es-content-body"
+                            width="600"
+                            cellspacing="0"
+                            cellpadding="0"
+                            bgcolor="#ffffff"
+                            align="center"
+                          >
+                            <tr>
+                              <td
+                                class="es-p30t es-p40r es-p40l"
+                                style="background-repeat: no-repeat;padding: 30px 40px 0px 40px;"
+                                align="left"
+                              >
+                                <table width="100%" cellspacing="0" cellpadding="0">
+                                  <tr>
+                                    <td width="520" valign="top" align="center">
+                                      <table
+                                        width="100%"
+                                        cellspacing="0"
+                                        cellpadding="0"
+                                        role="presentation"
+                                      >
+                                      <tr>
+                                        <td class="es-p15b" align="center">
+                                          <h1
+                                            style="
+                                              color: #ffffff;
+                                              font-size: 69px;
+                                              font-family: georgia, times,
+                                                'times new roman', serif;
+                                              line-height: 69px;
+                                              margin: 0px;
+                                              position: relative;
+                                            "
+                                          >
+                                          <!-- <span style="
+                                          color: red;
+                                      ">Tax</span><span style="color: black;">So <span style="position: absolute;
+  font-size: 28px;
+  top: -15px;">&#174;</span></span> --><img src="https://www.arohar.com/images/Taxso_Logo_Razor.png" height="87px" />
+                                                                            </h1>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td class="es-m-txt-l" align="left">
+                                                                        <h2 style="font-size: 28px;color: #333333;">
+                                                                            We’re very happy you’re here.
+                                                                        </h2>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td class="es-m-txt-l" align="left" style="font-size: 0">
+                                                                        <a target="_blank" href="https://esputnik.com/viewInBrowser">
+                                                                            <amp-img src="https://ugopmi.stripocdn.email/content/guids/CABINET_6ebdc9f620b6c98ec92e579217982603/images/99301524564595313.png" alt style="display: block" width="75" height="9"></amp-img>
+                                                                        </a>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td class="es-p15t" align="left">
+                                                                        <p style="color: #666666;">
+                                                                            <span class="product-description">Thank you for subscribing to TaxSo.Your Trial period has been started and Your login details are listed below. We suggest you change your password after logging in for the first time.</span
+                                              >
+                                            </p>
+                                          </td>
+                                        </tr>
+                                        <tr>
+                                          <td><h3 style="color: #666666;" >Your Account Information:</h3></td>
+                                        </tr>
+                                        <tr>
+                                          <td class="es-p25t es-p10b" align="left">
+                                            <p style="color: #666666;">Company Name :  <span id="RegisteredTemplateCompanyName" style="font-size: medium;"></span></p>
+                                                                        <p style="color: #666666;">
+                                                                            Email : <span id="RegisteredTemplateEmailId" style="font-size: medium;"></span>
+                                                                        </p>
+                                                                        <p style="color: #666666;">User Name : <span id="RegisteredUsername" style="font-size: medium;"></span></p>
+                                                                        <p style="color: #666666;">
+                                                                            Password : <span id="RegisteredPassword" style="font-size: medium;"></span>
+                                                                        </p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td class="es-p15t" align="left">
+                                                                        <p style="color: #666666;">
+                                                                            <span class="product-description">In case you have any queries, please feel free to reply to this email.
+                                                we're always happy to help out.</span
+                                              >
+                                            </p>
+                                          </td>
+                                        </tr>
+                                      </table>
+                                    </td>
+                                  </tr>
+                                </table>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td class="es-p20t es-p40b es-p40r es-p40l" style="padding: 10px 40px 10px 40px;" align="left">
+                                <table width="100%" cellspacing="0" cellpadding="0">
+                                  <tr>
+                                    <td width="520" valign="top" align="center">
+                                      <table
+                                        width="100%"
+                                        cellspacing="0"
+                                        cellpadding="0"
+                                        role="presentation"
+                                      >
+                                        <tr>
+                                          <td class="es-p5t" align="left">
+                                            <span class="es-button-border"
+                                              ><a
+                                                style="border-style: solid;
+                                                border-color: #ff0000;
+                                                border-width: 8px 30px 8px 30px;
+                                                display: inline-block;
+                                                background: #ff0000;
+                                                border-radius: 5px;
+                                                font-size: 16px;
+                                                font-family: arial, 'helvetica neue', helvetica, sans-serif;
+                                                font-weight: normal;
+                                                font-style: normal;
+                                                line-height: 120%;
+                                                color: #ffffff;
+                                                text-decoration: none;
+                                                width: auto;
+                                                text-align: center;"
+                                                href="https://portal.taxso.in/"
+                                                class="es-button"
+                                                target="_blank"
+                                                >Access Account</a
+                                              ></span
+                                            >
+                                          </td>
+                                        </tr>
+                                      </table>
+                                    </td>
+                                  </tr>
+                                </table>
+                              </td>
+                            </tr>
+                          </table>
+                        </td>
+                      </tr>
+                    </table>
+                    <!-- <table
+                      class="es-content"
+                      cellspacing="0"
+                      cellpadding="0"
+                      align="center"
+                    >
+                      <tr></tr>
+                      <tr>
+                        <td align="center">
+                          <table
+                            class="es-content-body"
+                            width="600"
+                            cellspacing="0"
+                            cellpadding="0"
+                            bgcolor="#ffffff"
+                            align="center"
+                          >
+                            <tr>
+                              <td
+                                style="background-color: #223748;display: flex;"
+                                bgcolor="#223748"
+                                align="left"
+                              >
+                                <table
+                                  class="es-left"
+                                  cellspacing="0"
+                                  cellpadding="0"
+                                  align="left"
+                                >
+                                  <tr>
+                                    <td class="es-m-p0r" width="600" align="center">
+                                      <table
+                                        width="100%"
+                                        cellspacing="0"
+                                        cellpadding="0"
+                                        role="presentation"
+                                      >
+                                        <tr>
+                                          <td align="right" style="font-size: 0">
+                                            <a
+                                              target="_blank"
+                                              href="#"
+                                              ><img
+                                                class="adapt-img"
+                                                src="https://www.arohar.com/images/Landingpage19Oct.jpg"
+                                                alt
+                                                style="display: block;width: 100%;height: 36.8vh;"
+                                                layout="responsive"
+                                              ></a>
+                                          </td>
+                                        </tr>
+                                      </table>
+                                    </td>
+                                  </tr>
+                                </table>
+                                
+                              </td>
+                            </tr>
+                          </table>
+                        </td>
+                      </tr>
+                    </table> -->
+                    <table
+                      class="es-content"
+                      cellspacing="0"
+                      cellpadding="0"
+                      align="center"
+                    >
+                      <tr>
+                        <td align="center">
+                          <table
+                            class="es-content-body"
+                            width="600"
+                            cellspacing="0"
+                            cellpadding="0"
+                            bgcolor="#ffffff"
+                            align="center"
+                          >
+                            <tr>
+                              <td class="es-p20t es-p40r es-p40l" align="left" style="padding: 0px 40px 0px 40px;">
+                                <table width="100%" cellspacing="0" cellpadding="0">
+                                  <tr>
+                                    <td width="520" valign="top" align="center">
+                                      <table
+                                        width="100%"
+                                        cellspacing="0"
+                                        cellpadding="0"
+                                        role="presentation"
+                                      >
+                                        <tr>
+                                          <td align="left" style="padding: 20px 40px 0px 0px;"><h2 style="color: #333333;">Get our App</h2></td>
+                                        </tr>
+                                      </table>
+                                    </td>
+                                  </tr>
+                                </table>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td class="es-p20t es-p40b es-p40r es-p40l" align="left" style="padding: 0px 40px 40px 40px;">
+                                <!--[if mso]><table width="520" cellpadding="0" cellspacing="0"><tr><td width="150" valign="top"><![endif]-->
+                                <table
+                                  class="es-left"
+                                  cellspacing="0"
+                                  cellpadding="0"
+                                  align="left"
+                                  style="display: none;"
+                                >
+                                  <tr>
+                                    <td
+                                      class="es-m-p0r es-m-p20b"
+                                      width="130"
+                                      align="center"
+                                    >
+                                      <table
+                                        width="100%"
+                                        cellspacing="0"
+                                        cellpadding="0"
+                                        role="presentation"
+                                      >
+                                        <tr>
+                                          <td align="center" style="font-size: 0">
+                                            <a
+                                              target="_blank"
+                                              href="#"
+                                              ><img
+                                                class="adapt-img"
+                                                src="https://ugopmi.stripocdn.email/content/guids/CABINET_6ebdc9f620b6c98ec92e579217982603/images/81101525781549293.png"
+                                                alt
+                                                style="display: block;padding: 0px 40px 10px 40px;width: 100%;"
+                                             ></a>
+                                          </td>
+                                        </tr>
+                                      </table>
+                                    </td>
+                                    <td class="es-hidden" width="20"></td>
+                                  </tr>
+                                </table>
+                                <!--[if mso]></td>
+        <td width="130" valign="top"><![endif]-->
+                                <table
+                                  class="es-left"
+                                  cellspacing="0"
+                                  cellpadding="0"
+                                  align="left"
+                                >
+                                  <tr>
+                                    <td class="es-m-p20b" width="130" align="center">
+                                      <table
+                                        width="100%"
+                                        cellspacing="0"
+                                        cellpadding="0"
+                                        role="presentation"
+                                      >
+                                        <tr>
+                                          <td align="center" style="font-size: 0">
+                                            <a
+                                              target="_blank"
+                                              href="https://play.google.com/store/apps/details?id=in.taxso.portal.tb"
+                                              ><img
+                                                class="adapt-img"
+                                                src="https://ugopmi.stripocdn.email/content/guids/CABINET_6ebdc9f620b6c98ec92e579217982603/images/74371525781549159.png"
+                                                alt
+                                                style="display: block;width: 100%;"
+                                                layout="responsive"
+                                              ></a>
+                                          </td>
+                                        </tr>
+                                      </table>
+                                    </td>
+                                  </tr>
+                                </table>
+                                <!--[if mso]></td><td width="20"></td>
+        <td width="220" valign="top"><![endif]-->
+                                <!-- <table
+                                  class="es-right"
+                                  cellspacing="0"
+                                  cellpadding="0"
+                                  align="right"
+                                >
+                                  <tr>
+                                    <td width="220" align="center">
+                                      <table
+                                        width="100%"
+                                        cellspacing="0"
+                                        cellpadding="0"
+                                        role="presentation"
+                                      >
+                                        <tr>
+                                          <td class="es-m-txt-c" align="left">
+                                            <p style="font-size: 14px;color: #666666;margin-top: 5px;">
+                                              Download app to follow updates. Our app is ethical.
+                                            </p>
+                                          </td>
+                                        </tr>
+                                      </table>
+                                    </td>
+                                  </tr>
+                                </table> -->
+                                <!--[if mso]></td></tr></table><![endif]-->
+                              </td>
+                            </tr>
+                          </table>
+                        </td>
+                      </tr>
+                    </table>
+                    <table
+                      cellpadding="0"
+                      cellspacing="0"
+                      class="es-footer"
+                      align="center"
+                    >
+                      <tr>
+                        <td align="center">
+                          <table
+                            class="es-footer-body"
+                            width="600"
+                            cellspacing="0"
+                            cellpadding="0"
+                            align="center"
+                          >
+                            <tr>
+                              <td class="es-p20t es-p10r es-p10l" style="padding: 15px 10px 0px 10px;" align="left">
+                                <table width="100%" cellspacing="0" cellpadding="0">
+                                  <tr>
+                                    <td width="580" valign="top" align="center">
+                                      <table
+                                        width="100%"
+                                        cellspacing="0"
+                                        cellpadding="0"
+                                        role="presentation"
+                                      >
+                                        <!-- <tr>
+                                          <td
+                                            class="es-p10b es-m-txt-c"
+                                            align="center"
+                                            style="font-size: 0;padding-bottom: 10px;"
+                                          >
+                                            <table
+                                              class="es-table-not-adapt es-social"
+                                              cellspacing="0"
+                                              cellpadding="0"
+                                              role="presentation"
+                                            >
+                                              <tr>
+                                                <td
+                                                  class="es-p10r"
+                                                  valign="top"
+                                                  align="center"
+                                                  style="padding-right: 10px;"
+                                                >
+                                                  <img
+                                                    title="Instagram"
+                                                    src="https://ugopmi.stripocdn.email/content/assets/img/social-icons/rounded-white-bordered/instagram-rounded-white-bordered.png"
+                                                    alt="Inst"
+                                                    style="width: 32px;height: 32px;"
+                                                  ></img>
+                                                </td>
+                                                <td
+                                                  class="es-p10r"
+                                                  valign="top"
+                                                  align="center"
+                                                  style="padding-right: 10px;"
+                                                >
+                                                  <img
+                                                    title="Youtube"
+                                                    src="https://ugopmi.stripocdn.email/content/assets/img/social-icons/rounded-white-bordered/youtube-rounded-white-bordered.png"
+                                                    alt="Yt" 
+                                                    style="width: 32px;height: 32px;"
+                                                  ></img>
+                                                </td>
+                                                <td
+                                                  class="es-p10r"
+                                                  valign="top"
+                                                  align="center"
+                                                  style="padding-right: 10px;"
+                                                >
+                                                  <img
+                                                    title="Pinterest"
+                                                    src="https://ugopmi.stripocdn.email/content/assets/img/social-icons/rounded-white-bordered/pinterest-rounded-white-bordered.png"
+                                                    alt="P"
+                                                    style="width: 32px;height: 32px;"
+                                                  ></img>
+                                                </td>
+                                                <td valign="top" align="center">
+                                                  <img
+                                                    title="Facebook"
+                                                    src="https://ugopmi.stripocdn.email/content/assets/img/social-icons/rounded-white-bordered/facebook-rounded-white-bordered.png"
+                                                    alt="Fb"
+                                                    style="width: 32px;height: 32px;"
+                                                  ></img>
+                                                </td>
+                                              </tr>
+                                            </table>
+                                          </td>
+                                        </tr> -->
+                                        <tr>
+                                          <td class="es-p10t es-m-txt-c" align="center" style="padding-top: 10px;color: white;">
+                                            <p>
+                                              You're receiving this email because you
+                                              created an account.
+                                            </p>
+                                            <p>
+                                                AROHAR TECHNOLOGIES PVT. LTD
+                                                © Copyright 2021. Privacy Policy
+                                            </p>
+                                          </td>
+                                        </tr>
+                                        <tr>
+                                          <td align="center" class="es-p20t es-m-txt-c" style="padding-top: 20px;">
+                                            <p>
+                                              <a
+                                                target="_blank"
+                                                href="https://www.arohar.com/privacypolicy.html"
+                                                >Privacy Policy</a
+                                              >
+                                              <!-- |
+                                              <a
+                                                target="_blank"
+                                                href
+                                                class="unsubscribe"
+                                                >Unsubscribe</a
+                                              > -->
+                                            </p>
+                                          </td>
+                                        </tr>
+                                      </table>
+                                    </td>
+                                  </tr>
+                                </table>
+                              </td>
+                            </tr>
+                          </table>
+                        </td>
+                      </tr>
+                    </table>
+                    <table
+                      class="es-content"
+                      cellspacing="0"
+                      cellpadding="0"
+                      align="center"
+                    >
+                      <tr>
+                        <td align="center">
+                          <table
+                            class="es-content-body"
+                            style="background-color: transparent"
+                            width="600"
+                            cellspacing="0"
+                            cellpadding="0"
+                            align="center"
+                          >
+                            <tr>
+                              <td class="es-p30t es-p30b es-p20r es-p20l" align="left">
+                                <table width="100%" cellspacing="0" cellpadding="0">
+                                  <tr>
+                                    <td width="560" valign="top" align="center">
+                                      <table
+                                        width="100%"
+                                        cellspacing="0"
+                                        cellpadding="0"
+                                        role="presentation"
+                                      >
+                                        <tr>
+                                          <td
+                                            class="es-infoblock made_with"
+                                            align="center"
+                                            style="font-size: 0"
+                                          >
+                                            <a
+                                              target="_blank"
+                                              href="https://www.arohar.com"
+                                              ><amp-img
+                                                src="https://www.arohar.com/images/logo.png"
+                                                alt
+                                                width="125"
+                                                height="56"
+                                              ></amp-img
+                                            ></a>
+                                          </td>
+                                        </tr>
+                                      </table>
+                                    </td>
+                                  </tr>
+                                </table>
+                              </td>
+                            </tr>
+                          </table>
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+              </table>
+            </div>
+      </div>
+          <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+          <script src="js/jquery.min.js" type="text/javascript"></script>
+          <script src="js/moderniz.min.js" type="text/javascript"></script>
+          <script src="js/jquery.easing.1.3.js" type="text/javascript"></script>
+          <script type="text/javascript" src="js/send-mail.js"></script>  
+          <!-- bootstrap js-->
+          <script src="bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
+          <script type="text/javascript" src="js/jquery.flexslider-min.js"></script>
+          <script type="text/javascript" src="js/parallax.min.js"></script> 
+          <script type="text/javascript" src="js/jquery.prettyPhoto.js"></script>	
+          <script type="text/javascript" src="js/contact_me.js"></script> 
+          <script type="text/javascript" src="js/jqBootstrapValidation.js"></script>
+          <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/js/bootstrap.bundle.min.js"></script>
+
+          <!--revolution slider scripts-->
+          <script src="rs-plugin/js/jquery.themepunch.tools.min.js" type="text/javascript"></script>
+          <script src="rs-plugin/js/jquery.themepunch.revolution.min.js" type="text/javascript"></script>  
+          <script src="js/template.js?v=2" type="text/javascript"></script>
+      </body>    
+</html>

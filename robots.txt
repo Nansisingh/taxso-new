@@ -1,0 +1,8 @@
+User-Agent: *
+Allow: /index.html/
+Allow: /Career.html/
+Allow: /pricing.html/
+Allow: /privacypolicy.html/
+Allow: /Signup_New.html/
+Allow: /TermsAndConditions.html/
+Sitemap: https://www.taxso.in/index.html/
